@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /**********************************************************/
@@ -28,9 +28,18 @@ header{
     max-width: 1024px;
     margin: 0 auto;
 }
+.container h1{
+    text-align: center;
+}
 .menu{
-    display: flex;
-    
+    display: flex;  
+}
+.logo{
+    width: 20%;
+}
+.logo img{
+    width: 100%;
+    object-fit: cover;
 }
 .menu li{
     list-style: none;
@@ -164,7 +173,6 @@ figure{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
     text-align: center;
 }
@@ -253,6 +261,112 @@ footer{
     text-align: center;
     color: #fff;
 }
+
+/**********************************************************/
+/******************* CSS PAGE SPECIALTY *******************/
+
+.especialidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+.lista-especialidades{
+    display: flex;
+}
+.lista-especialidades li{
+    list-style: none;
+}
+.lista-especialidades a{
+    text-decoration: none;
+    padding: 5px 0;
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom: 3px solid #00CAD1;
+    margin: 0 10px;
+    margin-bottom: 30px;
+}
+.titulo-especialidades{
+    text-align: center;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+#ortopedia,
+#pediatria,
+#geriatria,
+#psicologia,
+#fisioterapia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#ortopedia h3, p,
+#pediatria h3, p,
+#geriatria h3, p,
+#psicologia h3, p,
+#fisioterapia h3, p{
+    margin-bottom: 20px;
+}
+.tabela{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 250px;
+    text-align: center;
+}
+thead .linha-tabela{
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.top-tabela:only-of-type{
+    margin: 0;
+    padding: 0;
+    background-color: #00CAD1;
+    color: white;
+}
+tbody .linha-tabela:nth-of-type(odd){
+    background-color: #d8d8d8;
+}
+tbody .linha-tabela:nth-of-type(even){
+    background-color: #f1f1f1;
+}
+/* table::before{
+    content: "";
+    background-image: url('../assets/img/ortopedia.png');
+    background-size: cover;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    display: flex;
+} */
+.container-table{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 80px;
+}
+.container-table figure{
+    width: 30%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**********************************************************/
 /********************* MEDIA QUERIES **********************/
