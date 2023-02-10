@@ -273,6 +273,9 @@ footer{
 }
 .lista-especialidades{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .lista-especialidades li{
     list-style: none;
@@ -284,7 +287,7 @@ footer{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-bottom: 3px solid #00CAD1;
     margin: 0 10px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .titulo-especialidades{
     text-align: center;
@@ -292,6 +295,7 @@ footer{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 #ortopedia,
@@ -381,6 +385,9 @@ tbody .linha-tabela:nth-of-type(even){
     .list-about{
         text-align: center;
 }
+    .tabela{
+        width: 100%;
+    }
 }
 
 @media (min-width: 10px) and (max-width:425px){
@@ -423,5 +430,10 @@ tbody .linha-tabela:nth-of-type(even){
     .card-img{
         width: 100%;
     }
-    
+    .tabela{
+        width: 100%;
+    }
+    .lista-especialidades li{
+        line-height: 40px;
+    }
 }
