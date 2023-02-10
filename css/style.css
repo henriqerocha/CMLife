@@ -12,6 +12,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 10vh;
     background-color: #00CAD1;
@@ -41,8 +42,7 @@ header{
     font-size: 20px;
 }
 .menu a:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #00bbc2;
     border-radius: 5px;
 }
 
@@ -78,8 +78,12 @@ header{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .top-about{
-    width: 80%;
+    width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .top-about h2{
     font-weight: bold;
@@ -90,18 +94,220 @@ header{
 }
 
 .bot-about{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 40px;
 }
+.bot-about figure{
+    width: 50%;
+}
+.bot-about figure img{
+    width: 80%;
+    object-fit: cover;
+}
 .list-about{
+    width: 100%;
     color: #8a8a8a;
-    margin-left: 40px;
 }
 .list-about li{
     margin-left: 40px;
 }
 .list-about h3{
     margin-bottom: 30px;
+}
+
+/*--------------- Especialty ----------------*/
+
+.flex-column{
+    flex-direction: column;
+}
+.specialty{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center ;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.top-specialty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.top-specialty h3, p{
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+.bot-specialty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    width: 100%;
+}
+.card-img{
+    width: 31%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px #c0c0c0;
+    margin-bottom: 30px;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+figure figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.btn-horario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btn-horario a{
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #00a9af;
+    padding: 10px 15px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.btn-horario a:hover{
+    background-color: #00CAD1;
+}
+
+/*------------- CONTATO ----------------*/
+
+#contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.desc-contato{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.desc-contato h3{
+    margin-bottom: 30px;
+}
+.localization{
+    width: 100%;
+}
+.localization iframe{
+    width: 100%;
+}
+
+/**********************************************************/
+/********************* CSS DO RODAPÉ **********************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0C6E71;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.img-footer{
+    width: 10%;
+}
+.desc-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.desc-footer p{
+    width: 90%;
+    text-align: center;
+    color: #fff;
+}
+
+/**********************************************************/
+/********************* MEDIA QUERIES **********************/
+
+@media (min-width: 426px) and (max-width: 768px){
+    .card-img{
+        width: 45%;
+    }
+    .bot-about figure{
+        display: none;
+    }
+    .list-about{
+        text-align: center;
+}
+}
+
+@media (min-width: 10px) and (max-width:425px){
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+    }
+    .logo{
+        height: 60%;
+        border-bottom: 1px solid #0C6E71;
+    }
+    .menu-principal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+    .topo-site{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    .titulo-capa h1{
+        font-size: 26px;
+        text-align: center;
+    }
+    .bot-about figure{
+        display: none;
+    }
+    .list-about{
+        list-style-position: outside;
+        text-align: center;
+    }
+    .card-img{
+        width: 100%;
+    }
+    
 }
